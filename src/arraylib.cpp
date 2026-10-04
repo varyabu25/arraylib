@@ -47,6 +47,10 @@ int arr_product(const int* arr, std::size_t n) {
     return p;
 }
 
+// arr_median: вычисляет медиану массива.
+// Для нечётного n — средний элемент отсортированного массива.
+// Для чётного n — среднее двух средних элементов.
+// Исходный массив не изменяется (работаем с копией).
 double arr_median(const int* arr, std::size_t n) {
     int* copy = new int[n];
     for (std::size_t i = 0; i < n; ++i) copy[i] = arr[i];
